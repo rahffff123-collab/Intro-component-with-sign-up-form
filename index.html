@@ -2,18 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     *{
       margin:0;
       padding: 0;
-  
     }
     body{
       background-image: url('images/bg-intro-desktop.png');
@@ -22,29 +18,26 @@
       background-position: center;
       display: flex;
       justify-content: center;
-      justify-items: center;
-      margin:90px;
-
-
+      margin: 90px;
     }
-      .Card{
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   width: 1300px;
-   height: 390px;
-  padding: 30px;
-   gap: 1.5rem;
-
+    .Card{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 1300px;
+      height: 390px;
+      padding: 30px;
+      gap: 1.5rem;
     }
+
     /*-----------------------------------
-    Error Styles
+    Error Styles (تم تصحيح التسميات هنا)
     -------------------------------------*/
-.field-group {
+    .field-group {
       margin-bottom: 16px;
       width: 100%;
     }
 
-    .error-message{
+    .error-message {
       display: none;
       color: hsl(0, 100%, 74%);
       font-size: 11px;
@@ -53,8 +46,8 @@
       margin-top: 4px;
     }
 
-    /* بدون مسافة بين field-group و error لأن الكلاس يضاف عليه مباشرة */
-    .field-group.error-message input{
+    /* عندما يتم إضافة كلاس error للـ field-group */
+    .field-group.error input {
       border: 2px solid hsl(0, 100%, 74%);
       background-image: url('images/icon-error.svg');
       background-repeat: no-repeat;
@@ -62,90 +55,89 @@
       padding-right: 45px;
     }
 
-    .field-group.error-message input::placeholder {
+    .field-group.error input::placeholder {
       color: hsl(0, 100%, 74%);
     }
 
-    .field-group.error-message .error-text {
+    .field-group.error .error-message {
       display: block;
     }
-/*------------------------------------------------
-Right CARD
----------------------------------------------------*/
-    
-.Right{
-  display: flex;
-  flex-direction: column;
-  gap:24px;
-  width: 100%;
- 
-}
+
+    /*------------------------------------------------
+    Right CARD
+    ---------------------------------------------------*/
+    .Right{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      width: 100%;
+    }
     .miniCard{
-    border-radius: 8px;
-    background-color: hsl(248, 32%, 49%);
-    padding: 18px 22px;
-    text-align: center;
-    font-size: 15px;
-    box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 8px;
+      background-color: hsl(248, 32%, 49%);
+      padding: 18px 22px;
+      text-align: center;
+      font-size: 15px;
+      box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15);
     }
     .miniCard p{
-      color:white;
+      color: white;
     }
     .miniCard p span{
       font-weight: 700;
     }
     .bigCard{
-     padding: 40px; 
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15); 
-  box-sizing: border-box;
+      padding: 40px; 
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.15); 
+      box-sizing: border-box;
     }
     
     input {
-      margin-bottom:16px ;
       width: 100%;
       padding: 10px;
-      border-radius:5px ;
+      border-radius: 5px;
       border: 1px solid hsl(246, 25%, 77%);
       font-weight: 600;
       box-sizing: border-box;
+      outline: none;
     }
+
     button{
-      background-color:  hsl(154, 59%, 51%);
+      background-color: hsl(154, 59%, 51%);
       color: white;
       margin-bottom: 16px;
       width: 100%;
       padding: 15px;
       border-radius: 5px;
-       border: none;
-       font-weight: 600;
-       text-transform: uppercase;
-       cursor: pointer;
-  box-sizing: border-box;
+      border: none;
+      font-weight: 600;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-sizing: border-box;
     }
     .agrementPro{
       font-size: 11px;
-  color: hsl(246, 25%, 77%);
-  text-align: center;
-  line-height: 1.5;
+      color: hsl(246, 25%, 77%);
+      text-align: center;
+      line-height: 1.5;
     }
-  .agrementPro span{
-   color: hsl(0, 100%, 74%); /* لون بارز للشروط والخدمات */
-  font-weight: 700;
-  }
+    .agrementPro span{
+      color: hsl(0, 100%, 74%);
+      font-weight: 700;
+    }
+
     /*---------------------------------------------
     LeftCard
-    ------------------------------------------------*/              
+    ------------------------------------------------*/             
     .Left{
-      color:white;
-      
-     padding: 80px;
-
+      color: white;
+      padding: 80px;
     }
     .title{
       font-weight: 900;
@@ -153,73 +145,65 @@ Right CARD
     .Prograph{
       margin: 20px 0;
       font-size: small;
-
     }
-        /*---------------------------------------------
+
+    /*---------------------------------------------
     Mobile Style
     ------------------------------------------------*/  
-    @media (max-width: 768px)
-    {
-      .Card
-      {
+    @media (max-width: 768px) {
+      .Card {
         display: grid;
-         grid-template-columns: 1fr;
-
+        grid-template-columns: 1fr;
       }
-      .Left{
+      .Left {
         text-align: center;
       }
-
-
-    } 
-
-
+    }
   </style>
 </head>
 <body>
+
 <div class="Card">
   <div class="Left">
-  <h1 class="title">Learn to code by watching others</h1>
-
-  <p class="Prograph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable.</p> 
-</div>
-<div class="Right">
-<div class="miniCard">
- <p><span>Try it free 7 days</span> then $20/mo. thereafter</p> 
-</div>
-<div class="bigCard">
-
- <div class="field-group">
- <input type="text" placeholder="First Name" id="FirstName"/>
- <small class="error-message">First Name Cannot be empty</small>
- </div>
-  <div class="field-group">
-<input  type="text" placeholder="Last Name"  id="LastName" />
- <small class="error-message">Last Name Cannot be empty</small>
- </div>
-  <div class="field-group">
- <input  type="text" placeholder="Email Address" id="EmailAddress"/>
- <small class="error-message">Looks like this is not an email</small>
-</div>
- <div class="field-group">
- <input type="text" placeholder="Password" id="Password"/>
- <small class="error-message">Password cannot be empty</small>
-</div>
- <button> Claim your free trial </button>
-
-  <p class="agrementPro">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+    <h1 class="title">Learn to code by watching others</h1>
+    <p class="Prograph">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.</p> 
   </div>
+
+  <div class="Right">
+    <div class="miniCard">
+      <p><span>Try it free 7 days</span> then $20/mo. thereafter</p> 
+    </div>
+
+    <div class="bigCard">
+      <div class="field-group">
+        <input type="text" placeholder="First Name" id="FirstName"/>
+        <small class="error-message">First Name Cannot be empty</small>
+      </div>
+
+      <div class="field-group">
+        <input type="text" placeholder="Last Name" id="LastName" />
+        <small class="error-message">Last Name Cannot be empty</small>
+      </div>
+
+      <div class="field-group">
+        <input type="text" placeholder="Email Address" id="EmailAddress"/>
+        <small class="error-message">Looks like this is not an email</small>
+      </div>
+
+      <div class="field-group">
+        <input type="password" placeholder="Password" id="Password"/>
+        <small class="error-message">Password cannot be empty</small>
+      </div>
+
+      <button>Claim your free trial</button>
+
+      <p class="agrementPro">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+    </div>
   </div>
 </div>
-  <!--
-      <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </footer>
-    -->
-    <script>
-    let submitBtn = document.querySelector('button');
+
+<script>
+let submitBtn = document.querySelector('button');
 
 let inputFirstName = document.querySelector('#FirstName');
 let inputLastName = document.querySelector('#LastName');
@@ -229,28 +213,28 @@ let Password = document.querySelector('#Password');
 submitBtn.addEventListener('click', function(e) {
   e.preventDefault();
 
-  // 1. فحص الاسم الأول
+  // فحص الاسم الأول
   checkInput(inputFirstName);
 
-  // 2. فحص الاسم الأخير
+  // فحص الاسم الأخير
   checkInput(inputLastName);
 
-  // 3. فحص كلمة المرور
+  // فحص كلمة المرور
   checkInput(Password);
 
-  // 4. فحص الإيميل وتغيير الـ placeholder مثل الصورة
+  // فحص البريد الإلكتروني
   let emailGroup = EmailAddress.parentElement;
   if (EmailAddress.value.trim() === '' || !EmailAddress.value.includes('@')) {
     emailGroup.classList.add('error');
-    EmailAddress.placeholder = "email@example/com"; // يظهر داخل الحقل بلون أحمر
-    EmailAddress.value = ""; // تفريغ القيمة ليظهر الـ placeholder
+    EmailAddress.placeholder = "email@example/com";
+    EmailAddress.value = ""; 
   } else {
     emailGroup.classList.remove('error');
     EmailAddress.placeholder = "Email Address";
   }
 });
 
-// دالة بسيطة لفحص باقي الحقول العادية
+// دالة لفحص باقي الحقول
 function checkInput(input) {
   let parent = input.parentElement;
   if (input.value.trim() === '') {
@@ -259,6 +243,7 @@ function checkInput(input) {
     parent.classList.remove('error');
   }
 }
-    </script>
+</script>
+
 </body>
 </html>
